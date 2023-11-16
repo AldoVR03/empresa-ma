@@ -15,10 +15,10 @@ class Cliente(models.Model):
     idCliente = models.AutoField(primary_key=True)
     nombreEmpresa = models.CharField(max_length=50)
     rutEmpresa = models.CharField(max_length=50)
+    razonSocial = models.CharField(max_length=50)
     celular_Telefono = models.IntegerField(null=True, blank=True)
     correo = models.EmailField()
     password = models.CharField(max_length=50)
-    razonSocial = models.CharField(max_length=50)
 
 class Cotizacion(models.Model):
     idServicio = models.ForeignKey('Servicio', on_delete=models.RESTRICT)
