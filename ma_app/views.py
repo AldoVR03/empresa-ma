@@ -23,7 +23,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render, redirect
 from .forms import LoginForm  # Asegúrate de importar el formulario adecuado desde tu aplicación
-
+from django.http import HttpResponseServerError
 
 @login_required  # Esto asegura que solo usuarios autenticados pueden acceder a esta vista
 def ver_cotizacion(request):
@@ -52,7 +52,7 @@ def login_view(request):
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
 
-    
+"""  
 def registro_view(request):
     if request.method == 'POST':
         form = ClienteForm(request.POST)
@@ -63,7 +63,22 @@ def registro_view(request):
         form = ClienteForm()
 
     return render(request, 'registro.html', {'form': form})
+"""
+def registro_view(request):
+    try:
+        if request.method == 'POST':
+            form = ClienteForm(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Usuario registrado exitosamente.')
+        else:
+            form = ClienteForm()
 
+        return render(request, 'registro.html', {'form': form})
+    except Exception as e:
+        # Agrega registros o imprime la excepción para depurar
+        print(f"Error en registro_view: {str(e)}")
+        return HttpResponseServerError('Error interno del servidor')
 def cotizacion(request):
     return render(request, 'cotizacion.html')
 
