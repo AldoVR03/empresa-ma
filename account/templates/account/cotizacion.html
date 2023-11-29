@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<style>
+
+  .total-card-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+    margin:  auto;
+}
+
+.total{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Espacio entre las tarjetas */
+}
+.card {
+    background: #ffffff;
+    width: 300px; /* Cambia el valor según tus necesidades */
+    height: 400px; /* Cambia el valor según tus necesidades */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Reducido el espacio entre las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Centro el texto */
+}
+
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+}
+.checklist-item input {
+    margin-right: 10px;
+}
+</style>
+  <h1>Cotización</h1>
+  <body>
+
+    <div class="total-card-container">
+        <div class="total">
+            <div class="card-title">Total:</div>
+        </div>
+    </div>
+    
+    <div class="cards-container">
+        <div class="card">
+            <!-- Contenido de la tarjeta -->
+            <div class="card-content">
+                <!-- Título de la tarjeta -->
+                <div class="card-title" style="color: #000000; text-decoration: underline;">Estrategias</div>
+                
+                <!-- Checklist interactivo -->
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item1" value="350000">
+                        <label for="item1"> Posicionamiento($350.000)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item2" value="50000">
+                        <label for="item2"> Objetivos ($50.000)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item3" value="70000">
+                        <label for="item3"> Comerciales ($70.000)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item4" value="35000">
+                        <label for="item4"> Target ($35.000)</label>
+                    </div>
+        
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item5" value="80000">
+                        <label for="item5"> Contingencia ($80.000)</label>
+                    </div>
+        
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item6" value="35000">
+                        <label for="item6"> Co-Branding ($50.000)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <!-- Contenido de la tarjeta -->
+            <div class="card-content">
+                <!-- Título de la tarjeta -->
+                <div class="card-title">Audiovisual</div>
+                
+                <!-- Checklist interactivo -->
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item7" value="70000">
+                        <label for="item7"> Spot ($70.000)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item8" value="50000">
+                        <label for="item8"> Reels ($50.000)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item9" value="450000">
+                        <label for="item9">Microdocumentales($450.000)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item10" value="150000">
+                        <label for="item10"> Publicitarios ($150.000)</label>
+                    </div>
+        
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item11" value="400000">
+                        <label for="item11"> Propagandas ($400.000)</label>
+                    </div>
+        
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item12" value="400000">
+                        <label for="item12"> Series ($400.000)</label>
+                    </div>
+        
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item13" value="750000">
+                        <label for="item13"> Cortometraje ($750.000)</label>
+                    </div>
+        
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item14" value="1000000">
+                        <label for="item14"> Largometraje ($1.000.000)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <!-- Contenido de la tarjeta -->
+            <div class="card-content">
+                <!-- Título de la tarjeta -->
+                <div class="card-title">Opciones 360</div>
+                
+                <!-- Checklist interactivo -->
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item15" value="95000">
+                        <label for="item15"> Campañas($95.000)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item16" value="159999">
+                        <label for="item16"> Vía pública ($159.999)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item17" value="200000">
+                        <label for="item17"> On y Off Line ($200.000)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item18" value="100000">
+                        <label for="item18"> Line en Ads ($100.000)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- Contenido de la tarjeta -->
+            <div class="card-content">
+                <!-- Título de la tarjeta -->
+                <div class="card-title">Branding</div>
+                
+                <!-- Checklist interactivo -->
+                <div class="checklist">
+                    <input type="checkbox" id="item19" value="300000">
+                    <label for="item19"> Diseño ($300.000)</label><br>
+                    
+                    <input type="checkbox" id="item20" value="100000">
+                    <label for="item20"> Marca ($100.000)</label><br>
+                    
+                    <input type="checkbox" id="item21" value="150000">
+                    <label for="item21">Filosofía($150.000)</label><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- Contenido de la tarjeta -->
+            <div class="card-content">
+                <!-- Título de la tarjeta -->
+                <div class="card-title">Cosultora</div>
+                
+                <!-- Checklist interactivo -->
+                <div class="checklist">
+                    <input type="checkbox" id="item22" value="150000">
+                    <label for="item22">Nichos ($150.000)</label><br>
+                    
+                    <input type="checkbox" id="item23" value="100000">
+                    <label for="item23"> Internacional($100.000)</label><br>
+                    
+                    <input type="checkbox" id="item24" value="250000">
+                    <label for="item24"> Endomarketing ($250.000)</label><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- Contenido de la tarjeta -->
+            <div class="card-content">
+                <!-- Título de la tarjeta -->
+                <div class="card-title">Legal</div>
+                
+                <!-- Checklist interactivo -->
+                <div class="checklist">
+                    <input type="checkbox" id="item25" value="70000">
+                    <label for="item25"> Registro marca($70.000)</label><br>
+                    
+                    <input type="checkbox" id="item26" value="100000">
+                    <label for="item26"> Derechos autor($100.000)</label><br>
+                    
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+
+<script>
+// Encuentra todos los checkboxes
+let checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+
+// Encuentra el elemento donde se mostrará el total
+let totalElement = document.querySelector('.total .card-title');
+
+function updateTotal() {
+    let total = 0;
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            total += Number(checkbox.value);
+        }
+    });
+    totalElement.textContent = 'Total: $' + total.toLocaleString();
+}
+
+// Agrega un event listener a cada checkbox
+checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', updateTotal);
+});
+
+// Calcula y muestra el total inicial
+updateTotal();
+
+</script>
+{% endblock %}
