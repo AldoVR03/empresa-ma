@@ -8,7 +8,12 @@
   <link rel="stylesheet" href="/static/style.css">
   <style>
     .navbar-item img {
-      max-height: 8.75rem;
+        max-height: 8.75rem;
+    }
+
+    .navbar-item.no-click {
+        pointer-events: none;
+        cursor: default;
     }
   </style>
   
@@ -16,7 +21,7 @@
 <body style="background: linear-gradient(to right, #00e7ed, #ff00ff, #060017); font-family: monospace;">
   <nav class="navbar" role="navigation" aria-label="main navigation" style="background: linear-gradient(to right, #00e7ed, #ff00ff, #060017); font-family: monospace;">
 <!--------------------------------------------EmpresaMA------------------------------>
-<a class="navbar-item" >
+<a class="navbar-item.no-click" >
   <img class="logoo" src="/static/img/Logo-MA2.png" alt="LogoEmpresaMa" width="200" height="700">
   <p class="level-item has-text-centered is-size-3">AgenciaMA</p>
 </a>

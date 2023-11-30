@@ -3,37 +3,42 @@
 {% block content %}
 <style>
   body {
-      font-family: monospace;
-      margin: 20px;
+    font-family: monospace;
+    margin: 20px;
   }
 
   h1, h2 {
-      color: #333;
+    color: #333;
+    text-align: center;
+  }
+
+  .tablainfo {
+    width: 50%;
+    margin: 0 auto;
   }
 
   table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: transparent; /* Fondo transparente */
   }
 
-  th, td {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
+  .tablainfo th, .tablainfo td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
   }
 
-  th {
-      background-color: #f2f2f2;
+  .tablainfo th {
+    background-color: #f2f2f2;
   }
-
-  
 </style>
   <h1>Informacion de servicios</h1>
   <div class="tablainfo">
 
     <h2>Estrategias</h2>
-    <table>
+    <table class="table">
         <tr>
             <th>Posicionamiento</th>
             <td>Metas relacionadas con el rendimiento y los resultados comerciales.</td>
